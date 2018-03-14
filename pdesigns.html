@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+<body>
+
+
+    <div id='mainheader'>
+      <h1>Lab: Pixel Art Maker</h1>
+    </div>
+
+    <div class='designTitle'>
+      <h2>Design Canvas</h2>
+      <input type="button" id="clear" value="Clear Grid" tabindex="5">
+      <input type="button" id="snip" value="Save" tabindex="6">
+      <p id='saveInfo'>Right-click on the image and use Save Image option</p>
+      <hr>
+        <table id="pixelCanvas">
+        </table>
+      </div>
+
+    <div id='menus'>
+      <!-- <form id="sizePicker"> -->
+    <div class='mainInput'>
+      <div>
+        <h2 id='chooseGrid' class='anime'>Choose Grid Size</h2>
+      </div>
+      <div class='inputTitle'>
+          <div>
+            <label for="inputHeight" class="lbl"> Grid Height:  </label>
+            <input type="number" id="inputHeight" name="height" min="1" value="10" max="30" autofocus tabindex="1">
+          </div>
+      </div>
+      <div class='inputTitle'>
+          <div>
+          <label for="inputHeight" class="lbl"> Grid Width : </label>
+          <input type="number" id="inputWidth" name="width" min="1" value="10" max="60" tabindex="2">
+          </div>
+      </div>
+      <div class="maxSize">
+        <input type="textbox" id='maxRowCol' display=hidden>
+      </div>
+      <br>
+      <div class='inputTitle'>
+        <input type="button" id="submit" value="Submit" tabindex="3">
+        <input type="button" id="reset" value="Reset" tabindex="7">
+      </div>
+      <hr>
+      <!-- </form> -->
+      <h2 class='pickers'>
+        <span class='sPick'>Pick</span><span class='sA'> A</span><span class='sColor'> Color<span>
+      </h2>
+      <input type="color" id="colorPicker" tabindex="4">
+      <hr>
+      <h2 id='instructions'>Instructions:</h2>
+        <div class='steps'>
+        <p class='step1'>Enter the Grid size using the Grid Height</p>
+        <p class='step1'>and Grid Width option. Hit Submit.</p><hr>
+        <p class='step2'>Select a color using the color palette</p><hr>
+        <p class='step3'>Click and drag inside the grid to draw</p><hr>
+        <p class='step4'>Double click to erase single cell OR</p>
+        <p class='step4'>Hold CTRL key and drag mouse to erase</p>
+        <p class='step4'>multiple cells at once</p><hr>
+        <p class='step4'>Clear Grid button will erase entire grid</p><hr>
+        <p class='step5'>Hit Save to save your masterpiece</p><hr>
+        <p class='step6'>Hit Reset or Refresh page to start anew</p>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- <div class='designTitle'>
+    <h2>Design Canvas</h2>
+    <input type="button" id="clear" value="Clear Grid" tabindex="5">
+    <input type="button" id="snip" value="Save" tabindex="6">
+    <br><br>
+    <div id="tablepos">
+      <table id="pixelCanvas">
+      </table>
+    </div>
+    <div id="saveimg">
+    </div>
+    <p id='saveInfo'>Right-click on the image and use Save Image option</p>
+    </div> -->
+    <script src="designs.js"></script>
+</body>
+</html>
